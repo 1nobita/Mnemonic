@@ -1,0 +1,6 @@
+{
+  "name": "Mnemonic",
+  "description": "Live another life. Remember the past. Simulate the future. Automate the present.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
