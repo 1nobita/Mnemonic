@@ -58,7 +58,7 @@ class AuraViewModel(private val repository: MemoryRepository) : ViewModel() {
                 )
                 
                 val response = RetrofitClient.service.generateContent(BuildConfig.GEMINI_API_KEY, request)
-                val responseText = response.candidates.firstOrNull()?.content?.parts?.firstOrNull()?.text ?: ""
+                val responseText = response.candidates?.firstOrNull()?.content?.parts?.firstOrNull()?.text ?: ""
                 
                 val generatedSuggestions = responseText.split("\n").map { it.trim().removePrefix("-").trim() }.filter { it.isNotEmpty() }
                 

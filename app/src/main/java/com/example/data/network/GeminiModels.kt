@@ -79,10 +79,10 @@ data class PrebuiltVoiceConfig(
 
 @Serializable
 data class GenerateContentResponse(
-    val candidates: List<Candidate>
+    val candidates: List<Candidate>? = null
 )
 
 @Serializable
 data class Candidate(
-    val content: Content
+    val content: Content? = null
 )

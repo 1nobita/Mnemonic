@@ -59,7 +59,7 @@ class FutureTwinViewModel : ViewModel() {
                 )
                 
                 val response = RetrofitClient.service.generateContent(BuildConfig.GEMINI_API_KEY, request)
-                val responseText = response.candidates.firstOrNull()?.content?.parts?.firstOrNull()?.text ?: "I am unable to see the future right now."
+                val responseText = response.candidates?.firstOrNull()?.content?.parts?.firstOrNull()?.text ?: "I am unable to see the future right now."
                 
                 _messages.value = _messages.value + ChatMessage(responseText, isUser = false)
             } catch (e: Exception) {
